@@ -32,3 +32,6 @@ coxFit <- coxph(survObj ~ survData$sex==1)
 summary(coxFit)
 
 
+
+
+
