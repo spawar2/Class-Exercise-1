@@ -130,6 +130,17 @@ filenm <- "GSE33126_series_matrix.txt.gz"
 if(!file.exists(filenm)) download.file(url, destfile=filenm)
 gse <- getGEO(filename=filenm)
 
+# Download in Linux ##########################
+wget ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE33nnn/GSE33126/matrix/GSE33126_series_matrix.txt.gz
+gunzip GSE33126_series_matrix.txt.gz
+Change permission 
+chmod 777 All
+To set user (owner) executable permission bit on:
+chmod u+x file
+To set group read / write permission bits:
+chmod g+rw file
+###################################
+
 gse
 head(exprs(gse))
 
