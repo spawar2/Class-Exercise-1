@@ -1,4 +1,5 @@
 # R Exercise 2: Analysis of Microarray data, Shrikant Pawar 08/22/2018
+# function to separate two points, Intercept as 0??
 
 source("https://bioconductor.org/biocLite.R")
 biocLite("affy")
@@ -81,9 +82,19 @@ ER <- pData(pd)$estrogen
 Time <- factor(pData(pd)$time.h)
 design <- model.matrix(~ER+Time)
 design
+# Additive Effect, no difference between 10 and 48
+##   (Intercept) ER 48h
+## 1           1     0    0
+## 2           1     0    1
+# For any gene1 if it finds P value <0.05, it will be significant
 
 design2 <- model.matrix(~ER*Time)
 design2
+# Interactions, accounts for differences in time
+##   (Intercept)    ER   48h     ER:48h
+## 1           1     0    0          0
+## 2           1     0    1          0
+# If gene1 P value <0.05 with 10hr, checks for same with 48hr
 
 raw <-ReadAffy(celfile.path = "C:/Users/Bio-user/Documents/GitHub/Class-Exercise-1/estrogen", filenames=rownames(pData(pd)),phenoData = pd)
 raw
@@ -121,8 +132,8 @@ fit2 <- lmFit(eset, design2)
 fit2 <- eBayes(fit2)
 topTable(fit2, coef=2)
 
-#Annotation of samples
-
+#Annotation of the FIT samples
+setwd("C:/Users/Bio-user/Documents/GitHub/Class-Exercise-1/estrogen")
 library(GEOquery)
 library(limma)
 url <- "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE33nnn/GSE33126/matrix/GSE33126_series_matrix.txt.gz"
@@ -168,11 +179,99 @@ topTable(fit2)
 
 volcanoplot(fit2)
 
+##########Not used below #########################
+
 testResults <- topTable(fit2, number=nrow(fit2))
 testResults[which(testResults$Symbol == "OCIAD2"),]
 
 mylist <- c("LOC441066","ARF3","FMNL3","CSF1R","XLKD1","TTRAP","DMWD","SYNPO2L","PILRB","LAMP3")
 testResults[which(testResults$Symbol %in% mylist),]
+
+#####################################################
+
+In Class Assignment:
+
+# Load the libraries GEOquery, affy and limma.
+
+library(GEOquery)
+library(limma)
+library(affy)
+
+# Use url FTP link to download sample dataset GSE1000_series_matrix.txt.gz
+with function getGEO and assign it to an object gse.
+
+url <- "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE1nnn/GSE1000/matrix/GSE1000_series_matrix.txt.gz"
+filenm <- "GSE1000_series_matrix.txt.gz"
+if(!file.exists(filenm)) download.file(url, destfile=filenm)
+gse <- getGEO(filename=filenm)
+
+# Check the initial few rows of object gse with a function head.
+
+head(exprs(gse))
+
+# Take a log to base 2 for all expression levels
+
+gse_log <- log2(exprs(gse))
+
+# First 5 columns in gse are treatment, and next 5 are control.Take a average
+of first five and put in object named treatment, take average of last 5 columns
+and put in object named control. Then take a simple fold change to calculate
+fold difference in your expression levels and put it in object named fold.
+Use gse_log object to divide treatment and control columns use function 
+rowMeans() to calcuate the means of rows.
+
+treatment <- rowMeans(gse_log[,1:5])
+control <- rowMeans(gse_log[,6:10])
+fold <- treatment/control
+
+# Create box plot for treatment object in green and control object in red color
+on one panel for the calculated row means!!
+par(mfrow=c(2,1))
+boxplot(treatment, col="green")
+boxplot(control, col="red")
+
+# Export the fold object to a csv file.
+
+write.csv(fold, file = "fold.csv",row.names=FALSE)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
