@@ -236,8 +236,7 @@ write.csv(fold, file = "fold.csv",row.names=FALSE)
 
 Link to download Bowtie2:
 
-https://sourceforge.net/projects/bowtie-bio/files/bowtie2/2.3.4.3/bowtie2-2.3.4.3-linux-x8664.zip
-
+https://sourceforge.net/projects/bowtie-bio/files/bowtie2/2.3.4.3/bowtie2-2.3.4.3-linux-x86_64.zip
 
 
 
