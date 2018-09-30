@@ -234,6 +234,7 @@ boxplot(control, col="red")
 
 write.csv(fold, file = "fold.csv",row.names=FALSE)
 
+<<<<<<< HEAD
 ################################ INSTALL FastQC   ##########################################################################
 
 Windows:
@@ -268,6 +269,11 @@ Running Bowtie:
 
 bowtie2 -x lambda_virus -U /home/spawar2/6900_RNA_Analysis/bowtie2-2.3.4.3-linux-x86_64/example/reads/reads_1.fq -S eg1.sam
 
+=======
+Link to download Bowtie2:
+
+https://sourceforge.net/projects/bowtie-bio/files/bowtie2/2.3.4.3/bowtie2-2.3.4.3-linux-x86_64.zip
+>>>>>>> ac667569855dfe33b0ac0ddec6518a6943345903
 
 
 
