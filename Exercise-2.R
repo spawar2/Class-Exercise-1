@@ -234,6 +234,40 @@ boxplot(control, col="red")
 
 write.csv(fold, file = "fold.csv",row.names=FALSE)
 
+################################ INSTALL FastQC   ##########################################################################
+
+Windows:
+
+https://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.7.zip
+
+Mac:
+
+https://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.7.dmg
+
+ELSE run on Galaxy!
+
+/home/spawar2/6900_RNA_Analysis/bowtie2-2.3.4.3-linux-x86_64/example/reads
+
+Running Bowtie on Linux:
+
+cd
+
+nano .bash_profile
+
+PATH=$PATH:$HOME/.local/bin:$HOME/spawar2/6900_RNA_Analysis/bowtie2-2.3.4.3-linux-x86_64/bowtie2
+PATH=$PATH:/home/spawar2/6900_RNA_Analysis/bowtie2-2.3.4.3-linux-x86_64/bowtie2
+export PATH=$PATH:/home/spawar2/6900_RNA_Analysis/bowtie2-2.3.4.3-linux-x86_64:/home/spawar2/6900_RNA_Analysis/bowtie2-2.3.4.3-linux-x86_64
+
+su - spawar2
+
+Creating Index files:
+
+bowtie2-build ~reference/lambda_virus.fa lambda_virus
+
+Running Bowtie:
+
+bowtie2 -x lambda_virus -U /home/spawar2/6900_RNA_Analysis/bowtie2-2.3.4.3-linux-x86_64/example/reads/reads_1.fq -S eg1.sam
+
 
 
 
