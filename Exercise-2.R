@@ -273,7 +273,16 @@ bowtie2 -x lambda_virus -U /home/spawar2/6900_RNA_Analysis/bowtie2-2.3.4.3-linux
 Link to download Bowtie2:
 
 https://sourceforge.net/projects/bowtie-bio/files/bowtie2/2.3.4.3/bowtie2-2.3.4.3-linux-x86_64.zip
->>>>>>> ac667569855dfe33b0ac0ddec6518a6943345903
+
+=======
+
+Permissions denied to download HTSEQ and EdgeR/Deseq on snowball so use Galaxy instead.
+
+HTSEQ/Featurecounts program can be used on .SAM/.BAM files with:
+
+https://usegalaxy.org/?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fiuc%2Ffeaturecounts%2Ffeaturecounts%2F1.6.2&version=1.6.2&__identifer=d9o2nykh9z
+
+
 
 
 
