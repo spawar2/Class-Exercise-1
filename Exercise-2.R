@@ -282,7 +282,9 @@ HTSEQ/Featurecounts program can be used on .SAM/.BAM files with:
 
 https://usegalaxy.org/?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fiuc%2Ffeaturecounts%2Ffeaturecounts%2F1.6.2&version=1.6.2&__identifer=d9o2nykh9z
 
+Transfer files from linux server to local system:
 
+scp spawar2@131.96.155.217:/home/spawar2/NFV_Vectors.xlsx \Users\Bio-user\Desktop
 
 
 
