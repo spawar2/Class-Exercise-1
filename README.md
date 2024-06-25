@@ -1,4 +1,4 @@
-Bioinformatics 6930 Fall (4 credit) (10 students) *Graduate Class (Masters & Ph.D. Level)
+Claflin University, Orangeburg, South Carolina, USA Bioinformatics 6930 Fall (4 credit) (10 students) *Graduate Class (Masters & Ph.D. Level)
 https://www.claflin.edu/
 Bioinformatics: 
 
