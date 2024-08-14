@@ -1,5 +1,5 @@
-Claflin University, Orangeburg, South Carolina, USA Bioinformatics 6930 Fall (4 credit) (10 students) *Graduate Class (Masters & Ph.D. Level)
-https://www.claflin.edu/
+Georgia State University, Atlanta, USA Bioinformatics 6930 Fall (4 credit) (10 students) *Graduate Class (Masters & Ph.D. Level)
+https://catalogs.gsu.edu/preview_entity.php?catoid=4&ent_oid=231&returnto=562
 Bioinformatics: 
 
 https://youtu.be/G6Xh9QJQrjA
