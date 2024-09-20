@@ -29,3 +29,6 @@ Github: https://github.com/spawar2/BTEC-620-Spring-2023
 Bioinformatics (topics including sequence alignment algorithms, scoring matrices, microarray analysis, phylogenetic analysis, bootstrapping, tree building, secondary & tertiary structure prediction, homology modeling, and protein folding)], visualization: heat maps, volcano plots, pie charts, Blast, Sequence alignments (Margaret Dayhoff, PAM, blossom scoring matrices, global & local alignment). Gene Expression Omnibus (GEO) datasets mining, Microarray data analysis: Read, Pre-processing/Normalization (Affy, Oligo, Limma-RMA, Quantile, Mas5.0), Visualization: Heat maps, box plots, Fold change expression analysis, Gene Set Enrichment Analysis (GSEA), Pathways and protein downstream interactome analysis.
 
 Sequence alignments (Margaret Dayhoff, PAM, Blossom scoring matrices, global & local alignment): https://youtu.be/Lx1jkr3UKwA
+
+selected function(re.search,getROC_AUC, plot, as.numeric, sapply, as.numeric, unlist, svm, predict, Surv, survfit, surv_pvalue, foreca,ts)
+
