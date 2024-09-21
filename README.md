@@ -1,4 +1,4 @@
-Georgia State University, Atlanta, USA. Bioinformatics 6930 Fall (4 credit), (10 students) *Graduate Class (Masters & Ph.D. Level).
+Georgia State University, Atlanta, USA. Bioinformatics 6930, Fall (4 credit), (10 students) *Graduate Class (Masters & Ph.D. Level).
 https://catalogs.gsu.edu/preview_entity.php?catoid=4&ent_oid=231&returnto=562 https://csds.gsu.edu/
 Bioinformatics: 
 
@@ -30,5 +30,5 @@ Bioinformatics (topics including sequence alignment algorithms, scoring matrices
 
 Sequence alignments (Margaret Dayhoff, PAM, Blossom scoring matrices, global & local alignment): https://youtu.be/Lx1jkr3UKwA
 
-selected function(re.search,getROC_AUC, plot, as.numeric, sapply, as.numeric, unlist, svm, predict, Surv, survfit, surv_pvalue, foreca,ts)
+selected function(re.search,getROC_AUC, plot, as.numeric, sapply, as.numeric, unlist, svm, predict, Surv, survfit, surv_pvalue, foreca,ts).
 
